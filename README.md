@@ -10,7 +10,7 @@ In this connection, the problem of optimization and acceleration of sites arises
 
 And before proceeding to optimization, you should determine parameters by which we estimate the speed of a site. One of such parameters is [TTFB (Time to First Byte)](https://en.wikipedia.org/wiki/Time_To_First_Byte). TTFB is affected by almost everything: network problems and delays, incoming traffic volume, web server settings, volume and content optimizations. In a well-functioning system, the TTFB value can be less than 100 milliseconds (ms) for static content and 200-500 for dynamic content. For our site TTFB averaged 3 seconds.
 
-[Imgur](http://i.imgur.com/KM42ga9.png)
+![Imgur](http://i.imgur.com/hzjUCeP.png)
 
 First we decided to optimize Nginx. And the first step was to update it to the latest stable version.
 
@@ -92,7 +92,7 @@ error_log /var/log/nginx/error.log crit;
 
 The next point was the optimization of [uWSGI](https://uwsgi-docs.readthedocs.io/en/latest/). For this, we have configured the query caching for it. All this allowed to reduce the average TTFB by 2 seconds.
 
-[Imgur](http://i.imgur.com/QYuyo5w.png)
+![Imgur](http://i.imgur.com/XktkuCN.png)
 
 To further increase the speed of the site, it was decided to use caching. Django comes with a reliable and easy-to-configure caching system. All you need to do to configure the cache in Django is to specify where the cached data should reside - in the database, on the file system or directly in memory.
 
@@ -112,7 +112,7 @@ CACHES = {
 
 In our project, we used the fastest and most effective cache type - [Memcached](https://www.memcached.org/). Memcached stores the data directly in the RAM. Also it is used by such sites as Facebook and Wikipedia. The use of the cache reduced the average TTFB to 300-600 ms.
 
-[Imgur](http://i.imgur.com/9bzO4bk.png)
+![Imgur](http://i.imgur.com/QRgJAvM.png)
 
 So we made steps with the greatest impact in terms of reducing TTFB. What next? Can we further reduce the processing time of requests? Yes, we can! And for this we need to optimize the site code.
 
@@ -120,9 +120,15 @@ Before you begin to optimize the code, you need to find out the "bottlenecks". T
 
 For our project, we optimized some search algorithms and templates for highly loaded pages, as well as queries to the database and the base class of *Django Paginator*. This allowed us to reduce the average TTFB to 200-450 ms.
 
-[Imgur](http://i.imgur.com/8U5W7VX.png)
+![Imgur](http://i.imgur.com/HJBLC4V.png)
 
 After that we worked on accelerating page rendering on the client side. For this we used [CDN](https://en.wikipedia.org/wiki/Content_delivery_network) and delayed loading of images, and also optimized the styles, highlighting their critical part.
 
 All optimization work for our project took about 150 hours. But all these efforts greatly accelerated our site and made our customers happy.
+
+Best regards,
+
+**Nikita Lyakhov**,
+Software developer Dunice
+nikita.lyakhov@dunice.ru
 
