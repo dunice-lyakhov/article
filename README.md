@@ -130,5 +130,5 @@ Best regards,
 
 **Nikita Lyakhov**,
 Software developer Dunice
-nikita.lyakhov@dunice.ru  
+nikita.lyakhov@dunice.ru                  
 
