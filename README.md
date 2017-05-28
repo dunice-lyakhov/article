@@ -129,8 +129,6 @@ All optimization work for our project took about 150 hours. But all these effort
 Best regards,
 
 **Nikita Lyakhov**,
-
-Software developer Dunice
-
+Software Developer Dunice
 nikita.lyakhov@dunice.ru
 
