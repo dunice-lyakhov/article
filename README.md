@@ -1,4 +1,4 @@
-# Website Optimization. In pursuit of speed.
+# Website Optimization. The pursuit of speed.
 
 The modern world of the Web is rapidly evolving and the demands of users are developing along with it. Many people try to improve the design, add new functionality or display more content on web pages. This is all very important, but site visitors tend to take care more about the speed of downloading websites. In addition, the page load time becomes a more important factor when it comes to ranking in the search engines. Therefore, the page load time is an important parameter of any site.
 
@@ -128,7 +128,7 @@ All optimization work for our project took about 150 hours. But all these effort
 
 Best regards,
 
-**Nikita Lyakhov**,
-Software Developer Dunice
+**Nikita Lyakhov**,  
+Software Developer Dunice  
 nikita.lyakhov@dunice.ru
 
